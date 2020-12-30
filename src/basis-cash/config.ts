@@ -1,5 +1,5 @@
 import { Deployments } from './deployments';
-import { ChainId } from '@uniswap/sdk';
+import { ChainId } from '@lychees/uniscam-sdk';
 
 export type Configuration = {
   chainId: ChainId,

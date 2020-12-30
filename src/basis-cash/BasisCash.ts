@@ -1,4 +1,4 @@
-import { Fetcher, Route, Token } from '@uniswap/sdk';
+import { Fetcher, Route, Token } from '@lychees/uniscam-sdk';
 import { Configuration } from './config';
 import { ContractName, TokenStat, TreasuryAllocationTime } from './types';
 import { BigNumber, Contract, ethers, Overrides } from 'ethers';
@@ -167,7 +167,6 @@ export class BasisCash {
 
     const { chainId } = this.config;
     const { DAI } = this.config.externalTokens;
-
     const dai = new Token(chainId, DAI[0], 18);
     const token = new Token(chainId, tokenContract.address, 18);
 
