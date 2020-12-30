@@ -2017,6 +2017,19 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@lychees/uniscam-sdk@3.0.30-test.2":
+  version "3.0.30-test.2"
+  resolved "https://registry.yarnpkg.com/@lychees/uniscam-sdk/-/uniscam-sdk-3.0.30-test.2.tgz#6cd0b1e2a8f867d8ae8bcfb68440698de16586b8"
+  integrity sha512-wPzf6noek4AECAgyYz8FOHD0camx1WBzoCLAUHvhGOMtsTAK8CbCngyulOF7/Fo+a16WeuTzPVzI5DH0FDnlAQ==
+  dependencies:
+    "@uniswap/v2-core" "^1.0.0"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2667,32 +2680,6 @@
     lodash "^4.17.15"
     semver "^6.3.0"
     tsutils "^3.17.1"
-
-"@unisave/unisave-heco-sdk@^3.0.29-test.1":
-  version "3.0.29-test.1"
-  resolved "https://registry.yarnpkg.com/@unisave/unisave-heco-sdk/-/unisave-heco-sdk-3.0.29-test.1.tgz#e0f909d9250c54b0aa4e55e148b6b90c6bb73259"
-  integrity sha512-q3Vv7cHEmOHi6NQce/QptvhJAGuVOOGwyeAIn0apG9n5fWexzyx7NxEr/9cH4P1qEHAuHFLYxlBLjO73HJzYwg==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
-
-"@uniswap/sdk@^3.0.3-beta.1":
-  version "3.0.3-beta.1"
-  resolved "https://registry.yarnpkg.com/@uniswap/sdk/-/sdk-3.0.3-beta.1.tgz#ef758f45e1f7050e098956fce097aedb87e0ceed"
-  integrity sha512-8MqfVDXAHHcAnUxBAaoHdeGmLUc8Tu4GZ4n7kLabKlF2b4RUS/jnuUIdzOR9QPMdY/avw3gH/OtTxH2elDNShw==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
 
 "@uniswap/v2-core@^1.0.0":
   version "1.0.1"
