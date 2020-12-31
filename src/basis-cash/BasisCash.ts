@@ -282,13 +282,14 @@ export class BasisCash {
   }
 
   boardroomByVersion(version: string): Contract {
-    if (version === 'v1') {
-      return this.contracts.Boardroom1;
-    }
-    if (version === 'v2') {
-      return this.contracts.Boardroom2;
-    }
-    return this.contracts.Boardroom3;
+    // if (version === 'v1') {
+    //   return this.contracts.Boardroom1;
+    // }
+    // if (version === 'v2') {
+    //   return this.contracts.Boardroom2;
+    // }
+    // return this.contracts.Boardroom3;
+    return this.contracts.Boardroom;
   }
 
   currentBoardroom(): Contract {
