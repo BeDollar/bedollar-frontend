@@ -24,7 +24,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
   supplyLabel = 'Total Supply',
   stat,
 }) => {
-  const tokenUrl = `${config.etherscanUrl}/token/${address}`;
+  const tokenUrl = `${config.etherscanUrl}/token/${address}/25/1`;
   return (
     <Wrapper>
       <CardHeader>{title}</CardHeader>
