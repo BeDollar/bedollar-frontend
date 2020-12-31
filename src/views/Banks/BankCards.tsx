@@ -12,7 +12,7 @@ import Notice from '../../components/Notice';
 
 const BankCards: React.FC = () => {
   const [banks] = useBanks();
-
+  console.info('banks', banks)
   const activeBanks = banks.filter((bank) => !bank.finished);
   const inactiveBanks = banks.filter((bank) => bank.finished);
 

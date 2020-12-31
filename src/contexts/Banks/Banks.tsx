@@ -12,6 +12,7 @@ const Banks: React.FC = ({ children }) => {
     const banks: Bank[] = [];
 
     for (const bankInfo of Object.values(bankDefinitions)) {
+      console.info('bankInfo', bankInfo)
       if (bankInfo.finished) {
         if (!basisCash.isUnlocked) continue;
 
@@ -21,6 +22,7 @@ const Banks: React.FC = ({ children }) => {
           continue;
         }
       }
+      console.info('bankInfo go through')
       banks.push({
         ...bankInfo,
         address: config.deployments[bankInfo.contract].address,
