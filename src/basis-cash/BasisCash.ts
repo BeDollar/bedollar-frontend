@@ -193,9 +193,19 @@ export class BasisCash {
    * Redeem bonds for cash.
    * @param amount amount of bonds to redeem.
    */
-  async redeemBonds(amount: string): Promise<TransactionResponse> {
+  async redeemBonds(amount: string, targetPrice: BigNumber): Promise<TransactionResponse> {
     const { Treasury } = this.contracts;
-    return await Treasury.redeemBonds(decimalToBalance(amount));
+    try {
+      return await Treasury.redeemBonds(decimalToBalance(amount), targetPrice);
+    } catch (error) {
+      Treasury.callStatic
+        .redeemBonds(decimalToBalance(amount), targetPrice)
+        .catch((callError) => {
+          console.error('redeemBonds::callError::reason', callError.reason);
+          console.error('redeemBonds::callError', callError);
+          throw callError;
+        });
+    }
   }
 
   async earnedFromBank(poolName: ContractName, account = this.myAccount): Promise<BigNumber> {

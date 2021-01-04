@@ -42,10 +42,10 @@ const Bond: React.FC = () => {
 
   const handleRedeemBonds = useCallback(
     async (amount: string) => {
-      const tx = await basisCash.redeemBonds(amount);
-      addTransaction(tx, { summary: `Redeem ${amount} YSB` });
+        const tx = await basisCash.redeemBonds(amount, cashPrice);
+        addTransaction(tx, { summary: `Redeem ${amount} YSB` });
     },
-    [basisCash, addTransaction],
+    [basisCash, addTransaction, cashPrice],
   );
   const cashIsOverpriced = useMemo(() => cashPrice.gt(utils.parseUnits("1", 18)), [cashPrice]);
   const cashIsUnderPriced = useMemo(() => Number(bondStat?.priceInDAI) < 1.0, [bondStat]);
