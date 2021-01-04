@@ -7,7 +7,7 @@ import { parseUnits } from 'ethers/lib/utils';
 const useStake = (bank: Bank) => {
   const basisCash = useBasisCash();
   const handleTransactionReceipt = useHandleTransactionReceipt();
-  console.info("useStake::basisCash", basisCash)
+  console.info('useStake::basisCash', basisCash);
   const handleStake = useCallback(
     (amount: string) => {
       const amountBn = parseUnits(amount, bank.depositToken.decimal);

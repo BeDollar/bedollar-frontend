@@ -228,10 +228,10 @@ export class BasisCash {
    */
   async stake(poolName: ContractName, amount: BigNumber): Promise<TransactionResponse> {
     const pool = this.contracts[poolName];
-    console.info('pool', pool)
-    const gas = await pool.estimateGas.stake(amount);
-    console.info('estimateGas', gas)
-    return await pool.stake(amount, this.gasOptions(gas));
+    console.info('pool', pool);
+    // const gas = await pool.estimateGas.stake(amount);
+    // console.info('estimateGas', gas)
+    return await pool.stake(amount);
   }
 
   /**

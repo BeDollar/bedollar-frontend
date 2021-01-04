@@ -60,10 +60,10 @@ const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
   let uniswapUrl: string;
   if (bank.depositTokenName.includes('BAC')) {
     pairName = 'BAC-DAI pair';
-    uniswapUrl = 'https://app.unisave.exchange/#/add/0x72b5b52ab3a78b86c7ad32960cb0fc253af4a154/0xde76ccae3413c7af312251e99803b1433d3187f4';
+    uniswapUrl = 'https://app.unisave.exchange/#/add/0x401D3a138ab3b890FB3e1D19dF24c65D9042b1ea/0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867';
   } else {
     pairName = 'BAS-DAI pair';
-    uniswapUrl = 'https://app.unisave.exchange/#/add/0x01b0ef17faf5dc7d54a9ec76032c26bb13586728/0xde76ccae3413c7af312251e99803b1433d3187f4';
+    uniswapUrl = 'https://app.unisave.exchange/#/add/0x401D3a138ab3b890FB3e1D19dF24c65D9042b1ea/0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867';
   }
   return (
     <StyledLink href={uniswapUrl} target="_blank">
