@@ -61,7 +61,7 @@ const Bond: React.FC = () => {
           />
           <LaunchCountdown
             deadline={config.bondLaunchesAt}
-            description="How does Basis bond work?"
+            description="How does Yield Stable Bond work?"
             descriptionLink="https://docs.basis.cash/mechanisms/stabilization-mechanism"
           />
         </Page>
@@ -85,9 +85,9 @@ const Bond: React.FC = () => {
                 <ExchangeCard
                   action="Purchase"
                   fromToken={basisCash.BAC}
-                  fromTokenName="Basis Cash"
+                  fromTokenName="Yield Stable Dollar"
                   toToken={basisCash.BAB}
-                  toTokenName="Basis Bond"
+                  toTokenName="Yield Stable Bond"
                   priceDesc={
                     cashIsOverpriced
                       ? 'BAC is over $1'
@@ -118,9 +118,9 @@ const Bond: React.FC = () => {
                 <ExchangeCard
                   action="Redeem"
                   fromToken={basisCash.BAB}
-                  fromTokenName="Basis Bond"
+                  fromTokenName="Yield Stable Bond"
                   toToken={basisCash.BAC}
-                  toTokenName="Basis Cash"
+                  toTokenName="Yield Stable Dollar"
                   priceDesc={`${getDisplayBalance(bondBalance)} BAB Available`}
                   onExchange={handleRedeemBonds}
                   disabled={!bondStat || bondBalance.eq(0) || cashIsUnderPriced}
