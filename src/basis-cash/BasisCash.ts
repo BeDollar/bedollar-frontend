@@ -212,8 +212,12 @@ export class BasisCash {
     account = this.myAccount,
   ): Promise<BigNumber> {
     const pool = this.contracts[poolName];
+    console.info('stakedBalanceOnBank::pool', pool);
+    console.info('stakedBalanceOnBank::account', account);
     try {
-      return await pool.balanceOf(account);
+      const balance = await pool.balanceOf(account);
+      console.info(`stakedBalanceOnBank::balance for ${account} is ${balance}`);
+      return balance;
     } catch (err) {
       console.error(`Failed to call balanceOf() on pool ${pool.address}: ${err.stack}`);
       return BigNumber.from(0);
@@ -229,9 +233,9 @@ export class BasisCash {
   async stake(poolName: ContractName, amount: BigNumber): Promise<TransactionResponse> {
     const pool = this.contracts[poolName];
     console.info('pool', pool);
-    // const gas = await pool.estimateGas.stake(amount);
-    // console.info('estimateGas', gas)
-    return await pool.stake(amount);
+    const gas = await pool.estimateGas.stake(amount);
+    console.info('estimateGas', gas);
+    return await pool.stake(amount, this.gasOptions(gas));
   }
 
   /**
