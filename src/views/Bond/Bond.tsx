@@ -30,7 +30,7 @@ const Bond: React.FC = () => {
 
   const handleBuyBonds = useCallback(
     async (amount: string) => {
-      const tx = await basisCash.buyBonds(amount);
+      const tx = await basisCash.buyBonds(amount, cashPrice);
       const bondAmount = Number(amount) / Number(getDisplayBalance(cashPrice));
       addTransaction(tx, {
         summary: `Buy ${bondAmount.toFixed(2)} BAB with ${amount} BAC`,

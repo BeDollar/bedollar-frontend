@@ -1,7 +1,7 @@
 import { Fetcher, Route, Token } from '@lychees/uniscam-sdk';
 import { Configuration } from './config';
 import { ContractName, TokenStat, TreasuryAllocationTime } from './types';
-import { BigNumber, Contract, ethers, Overrides } from 'ethers';
+import { BigNumber, Contract, ethers, Overrides, utils } from 'ethers';
 import { decimalToBalance } from './ether-utils';
 import { TransactionResponse } from '@ethersproject/providers';
 import ERC20 from './ERC20';
@@ -183,9 +183,10 @@ export class BasisCash {
    * Buy bonds with cash.
    * @param amount amount of cash to purchase bonds with.
    */
-  async buyBonds(amount: string | number): Promise<TransactionResponse> {
+  async buyBonds(amount: string | number, cashPrice: BigNumber): Promise<TransactionResponse> {
     const { Treasury } = this.contracts;
-    return await Treasury.buyBonds(decimalToBalance(amount));
+    console.log(`Buy ${amount} bonds for cashPrice: ${utils.formatUnits(cashPrice)}`);
+    return await Treasury.buyBonds(decimalToBalance(amount), cashPrice);
   }
 
   /**
