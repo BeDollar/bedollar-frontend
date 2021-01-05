@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
+import Config from "../../config";
 import { useParams } from 'react-router-dom';
 import { useWallet } from 'use-wallet';
 
@@ -57,13 +58,16 @@ const Bank: React.FC = () => {
 
 const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
   let pairName: string;
+  let swapPrefix = 'https://app.unisave.exchange/#'
   let uniswapUrl: string;
+  const { Cash, Share } = Config.deployments;
+  
   if (bank.depositTokenName.includes('BAC')) {
     pairName = 'BAC-DAI pair';
-    uniswapUrl = 'https://app.unisave.exchange/#/add/0x401D3a138ab3b890FB3e1D19dF24c65D9042b1ea/0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867';
+    uniswapUrl = `${swapPrefix}/add/${Cash.address}/${Config.externalTokens.DAI[0]}`;
   } else {
     pairName = 'BAS-DAI pair';
-    uniswapUrl = 'https://app.unisave.exchange/#/add/0x401D3a138ab3b890FB3e1D19dF24c65D9042b1ea/0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867';
+    uniswapUrl = `${swapPrefix}/add/${Share.address}/${Config.externalTokens.DAI[0]}`;
   }
   return (
     <StyledLink href={uniswapUrl} target="_blank">
