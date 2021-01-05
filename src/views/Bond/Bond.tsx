@@ -31,19 +31,27 @@ const Bond: React.FC = () => {
 
   const handleBuyBonds = useCallback(
     async (amount: string) => {
-      const tx = await basisCash.buyBonds(amount, cashPrice);
-      const bondAmount = Number(amount) / Number(getDisplayBalance(cashPrice));
-      addTransaction(tx, {
-        summary: `Buy ${bondAmount.toFixed(2)} YSB with ${amount} BAC`,
-      });
+      try {
+        const tx = await basisCash.buyBonds(amount, cashPrice);
+        const bondAmount = Number(amount) / Number(getDisplayBalance(cashPrice));
+        addTransaction(tx, {
+          summary: `Buy ${bondAmount.toFixed(2)} YSB with ${amount} BAC`,
+        });
+      } catch (error) {
+        alert("Error happened when buyBonds, reason: " + error.reason)
+      }
     },
     [basisCash, addTransaction, cashPrice],
   );
 
   const handleRedeemBonds = useCallback(
     async (amount: string) => {
-        const tx = await basisCash.redeemBonds(amount, cashPrice);
-        addTransaction(tx, { summary: `Redeem ${amount} YSB` });
+        try {
+          const tx = await basisCash.redeemBonds(amount, cashPrice);
+          addTransaction(tx, { summary: `Redeem ${amount} YSB` });
+        } catch (error) {
+          alert("Error happened when redeem Bonds, reason: " + error.reason)
+        }
     },
     [basisCash, addTransaction, cashPrice],
   );

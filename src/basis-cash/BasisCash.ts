@@ -186,7 +186,19 @@ export class BasisCash {
   async buyBonds(amount: string | number, cashPrice: BigNumber): Promise<TransactionResponse> {
     const { Treasury } = this.contracts;
     console.log(`Buy ${amount} bonds for cashPrice: ${utils.formatUnits(cashPrice)}`);
-    return await Treasury.buyBonds(decimalToBalance(amount), cashPrice);
+    try {
+      const res = await Treasury.buyBonds(decimalToBalance(amount), cashPrice);
+      return res;
+    } catch (error) {
+      await Treasury.callStatic
+        .buyBonds(decimalToBalance(amount), cashPrice)
+        .catch((callError) => {
+          console.error('Error happened when buyBonds, reason: ', callError.reason);
+          throw callError;
+          // if (callError.reason) throw new Error(callError.reason);
+          // else throw new Error('Unknown error, please contact devs ASAP');
+        });
+    }
   }
 
   /**
@@ -196,9 +208,10 @@ export class BasisCash {
   async redeemBonds(amount: string, targetPrice: BigNumber): Promise<TransactionResponse> {
     const { Treasury } = this.contracts;
     try {
-      return await Treasury.redeemBonds(decimalToBalance(amount), targetPrice);
+      const res = await Treasury.redeemBonds(decimalToBalance(amount), targetPrice);
+      return res;
     } catch (error) {
-      Treasury.callStatic
+      await Treasury.callStatic
         .redeemBonds(decimalToBalance(amount), targetPrice)
         .catch((callError) => {
           console.error('redeemBonds::callError::reason', callError.reason);
