@@ -1,6 +1,6 @@
 {
   "Cash": {
-    "address": "0x401D3a138ab3b890FB3e1D19dF24c65D9042b1ea",
+    "address": "0x0448bbBA1Ef9DB65bea50Ef6F39a676c8e5405dC",
     "abi": [
       {
         "inputs": [],
@@ -454,7 +454,7 @@
     ]
   },
   "Bond": {
-    "address": "0x01BcCeFaB33638bd0cf3F838CfC58b97BDA02Ed5",
+    "address": "0xC78307519cB253c97746A02cfAF392600CcB6F28",
     "abi": [
       {
         "inputs": [],
@@ -908,7 +908,7 @@
     ]
   },
   "Share": {
-    "address": "0xa1215E9bb5b8c8305086D42Dc21cFFd0d512E3FD",
+    "address": "0x28240d5dFB7a1583604fE0D6eC79791Ec7FCADbd",
     "abi": [
       {
         "inputs": [],
@@ -1362,7 +1362,7 @@
     ]
   },
   "Boardroom": {
-    "address": "0xd976a092Dd24aF37B9f854E64ac9953eE9353E85",
+    "address": "0x9825dF725F975Bd797F52BF69b71dBb4f4Aca792",
     "abi": [
       {
         "inputs": [
@@ -1741,7 +1741,7 @@
     ]
   },
   "Treasury": {
-    "address": "0x4AD73128673CBc544Ea9100387596810593B7c25",
+    "address": "0x7F7d575CB16cB8449F1dDcd16472385C8C63877C",
     "abi": [
       {
         "inputs": [
@@ -2452,7 +2452,7 @@
     ]
   },
   "Oracle": {
-    "address": "0x127b002eB064888e02059ecc23E4d53AB8EF7d1a",
+    "address": "0xEb8B08c30FC35003c945a99B69b5d42da5e685Fa",
     "abi": [
       {
         "inputs": [
@@ -2863,7 +2863,7 @@
     ]
   },
   "BACDAIPool": {
-    "address": "0xb8A5Bbbf1F2533F8F75BaDe98BB5Ef100CB47179",
+    "address": "0xA43746F2050785299428a305F7338D973cD6F006",
     "abi": [
       {
         "inputs": [
@@ -3829,7 +3829,7 @@
     ]
   },
   "BACUSDCPool": {
-    "address": "0x473415f22eD1eF33900f4e39537A9B67c97b4BE3",
+    "address": "0x8669a3CC6513463b97E0a47468D16Aa97Db448FF",
     "abi": [
       {
         "inputs": [
@@ -4312,7 +4312,7 @@
     ]
   },
   "BACUSDTPool": {
-    "address": "0xD26Dbe30F2F0A2a5a6f12E7f19Bc480B30F21dab",
+    "address": "0x1DD52E94b6b25CB807459a1fAb949BA8Bb8605B2",
     "abi": [
       {
         "inputs": [
@@ -5278,7 +5278,7 @@
     ]
   },
   "DAIBACLPTokenSharePool": {
-    "address": "0xC4653EC1eABe1A87320a820B7828a2732Aa10735",
+    "address": "0xEB96E8c1b50e8b40A9f63801d8ac7D8F44c7954e",
     "abi": [
       {
         "inputs": [
@@ -5755,7 +5755,7 @@
     ]
   },
   "DAIBASLPTokenSharePool": {
-    "address": "0x975e4c65bc0C89bD96Ee450afB98Bbe4425160e0",
+    "address": "0x4468D866592807c533fd1e95BB59F4136915c7c6",
     "abi": [
       {
         "inputs": [

@@ -14,8 +14,8 @@ const configurations: { [env: string]: Configuration } = {
       // SUSD: ['0x57Ab1E02fEE23774580C119740129eAC7081e9D3', 18],
       USDC: ['0x64544969ed7ebf5f083679233325356ebe738930', 18],
       USDT: ['0x337610d27c682e347c9cd60bd4b3b107c9d34ddd', 18],
-      'BAC_DAI-UNI-LPv2': ['0x4A520B80A2470622c0e5f8Bb95B3A729128DD6f9', 18],
-      'BAS_DAI-UNI-LPv2': ['0xd0dF604A4ABAa68E51669CF3D38d6FA6635312b6', 18],
+      'BAC_DAI-UNI-LPv2': ['0x9F55D4d51DfEFA930124d0f8b91C92c29c9f21D0', 18],
+      'BAS_DAI-UNI-LPv2': ['0xF311BE43A02D3ef3b6a564eaD5511c098a406D65', 18],
     },
     baseLaunchDate: new Date('2020-11-26T00:00:00Z'), // TODO
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'), // TODO
@@ -35,8 +35,8 @@ const configurations: { [env: string]: Configuration } = {
       // SUSD: ['0x57Ab1E02fEE23774580C119740129eAC7081e9D3', 18],
       USDC: ['0x64544969ed7ebf5f083679233325356ebe738930', 18],
       USDT: ['0x337610d27c682e347c9cd60bd4b3b107c9d34ddd', 18],
-      'BAC_DAI-UNI-LPv2': ['0x4A520B80A2470622c0e5f8Bb95B3A729128DD6f9', 18],
-      'BAS_DAI-UNI-LPv2': ['0xd0dF604A4ABAa68E51669CF3D38d6FA6635312b6', 18],
+      'BAC_DAI-UNI-LPv2': ['0x9F55D4d51DfEFA930124d0f8b91C92c29c9f21D0', 18],
+      'BAS_DAI-UNI-LPv2': ['0xF311BE43A02D3ef3b6a564eaD5511c098a406D65', 18],
     },
     baseLaunchDate: new Date('2020-11-26T00:00:00Z'), // TODO
     bondLaunchesAt: new Date('2020-12-03T15:00:00Z'), // TODO
@@ -92,7 +92,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     contract: 'DAIBACLPTokenSharePool',
     depositTokenName: 'BAC_DAI-UNI-LPv2',
     earnTokenName: 'BAS',
-    finished: true,
+    finished: false,
     sort: 1,
   },
   DAIBASLPTokenSharePool: {
@@ -100,7 +100,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     contract: 'DAIBASLPTokenSharePool',
     depositTokenName: 'BAS_DAI-UNI-LPv2',
     earnTokenName: 'BAS',
-    finished: true,
+    finished: false,
     sort: 2,
   },
 };
